@@ -1,10 +1,12 @@
 public class shuttle implements Comparable<shuttle> {
     private String name;
     private int size;
+	public int time;
     
     public shuttle(String name, int size) {
         this.name = name;
         this.size = size;
+		time = 30;
     }
 
     public String getName() {
@@ -31,9 +33,9 @@ public class shuttle implements Comparable<shuttle> {
 
 	public String toString() {
 		if (this.size == 1){
-			return "SmallShuttle: " + this.name;
+			return "Small Shuttle: " + this.name + " | Break time: " + time + " minutes left.\n";
 		} else{
-			return "BigShuttle: " + this.name;
+			return "Big Shuttle: " + this.name + " | Break time: " + time + " minutes left.\n";
 		}
 		
 	}
